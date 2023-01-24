@@ -11,22 +11,22 @@
 
 int[,] CreateRandom2dArray(){
 
-		Console.Write("Input a number of rows: ");
-		int rows = Convert.ToInt32(Console.ReadLine());
+	Console.Write("Input a number of rows: ");
+	int rows = Convert.ToInt32(Console.ReadLine());
 
-		Console.Write("Input a number of columns: ");
-		int columns = Convert.ToInt32(Console.ReadLine());
+	Console.Write("Input a number of columns: ");
+	int columns = Convert.ToInt32(Console.ReadLine());
 
         Console.WriteLine();
 
-		int[,] arr = new int[rows,columns];
+	int[,] arr = new int[rows,columns];
         Random r = new Random();
 
-		for(int i = 0; i < rows; i++){
-			for(int j = 0; j < columns; j++){
-				arr[i,j] = r.Next(51,99) - r.Next(0,50);
-			}
+	for(int i = 0; i < rows; i++){
+		for(int j = 0; j < columns; j++){
+			arr[i,j] = r.Next(51,99) - r.Next(0,50);
 		}
+	}
     return arr;
 }
 
